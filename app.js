@@ -1,13 +1,16 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const userRoutes = require("./routes/userroutes");
+const userRoutes = require("./routes/userroutes/userroutes");
+const taskRoutes = require("./routes/taskroutes/taskroute")
 const errorHandler = require("./middlewares/errorhandler");
 const PORT = 9000;
 
 app.use(express.json());
 
 app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/tasks", taskRoutes);
+
 
 app.use(errorHandler);
 

@@ -1,8 +1,4 @@
-const express = require("express");
-const app = express();
-const mongoose = require("mongoose");
-const user = require("../model/user.model");
-const userModel = require("../model/user.model");
+const user = require("../../model/usermodels/user.model");
 
 const getAll = async (req, res) => {
   try {
